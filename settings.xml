@@ -1,0 +1,31 @@
+<settings>
+<servers>
+  <server>
+    <id>nextwork-tahiri-maven-central-store</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+<profiles>
+  <profile>
+    <id>nextwork-tahiri-maven-central-store</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>nextwork-tahiri-maven-central-store</id>
+        <url>https://nextwork-tahiri-495599762097.d.codeartifact.us-east-1.amazonaws.com/maven/maven-central-store/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+<mirrors>
+  <mirror>
+    <id>nextwork-tahiri-maven-central-store</id>
+    <name>nextwork-tahiri-maven-central-store</name>
+    <url>https://nextwork-tahiri-495599762097.d.codeartifact.us-east-1.amazonaws.com/maven/maven-central-store/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+</settings>
